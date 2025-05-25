@@ -1,0 +1,62 @@
+body {
+    font-family: 'Iosevka', monospace;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.header-icon {
+    padding: 15px;
+    font-size: 24px;
+    color: #000;
+}
+
+.section#section0 {
+    display: block; /* overrides fullPage.js flex centering */
+    padding: 4rem 2rem;
+  }
+
+.header-link {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: none;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s;
+}
+
+.header-link:hover {
+    background-color: #dee2e6;
+}
+
+.section {
+    position: relative;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Title pinned to top left */
+  .section-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Content block for stack name + photo */
+  .stack-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
