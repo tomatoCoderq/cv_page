@@ -1,33 +1,42 @@
 package main
 
 import (
+	"fmt"
 	"html/template"
 	"net/http"
-	"path/filepath"
 )
-
-func renderTemplate(w http.ResponseWriter, data any) {
-    files := []string{
-        filepath.Join("templates", "main.html"),
-    }
-
-    t, err := template.ParseFiles(files...)
-    if err != nil {
-        http.Error(w, "Template error: "+err.Error(), http.StatusInternalServerError)
-        return
-    }
-
-    err = t.ExecuteTemplate(w, "main.html", data)
-    if err != nil {
-        http.Error(w, "Execute error: "+err.Error(), http.StatusInternalServerError)
-    }
-}
 
 func main() {
 
+	tmpl := template.Must(template.ParseFiles(
+		"templates/base.html",
+		"templates/index.html",
+		"templates/header.html",
+		"templates/stack.html",
+		"templates/projects.html",
+		"templates/achievements.html",
+		"templates/more.html",
+	))
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-        renderTemplate(w, nil)
-    })
+		err := tmpl.ExecuteTemplate(w, "base.html", nil)
+		if err != nil {
+			http.Error(w, "Template error: "+err.Error(), http.StatusInternalServerError)
+		}
+	})
+	
+	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("assets"))))
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+
+
+	err := http.ListenAndServe(":8088", nil)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	// http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+    //     renderTemplate(w, nil)
+    // })
 
     // http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("assets"))))
 
@@ -49,8 +58,8 @@ func main() {
 	// http.Handle("/files/", http.StripPrefix("/files/", fsHandler))
 	// http.Handle("/", http.FileServer(http.Dir(".")))
 
-	err := http.ListenAndServe(":8080", nil)
-	if err != nil {
-		panic(err)
-	}
+	// err := http.ListenAndServe(":8080", nil)
+	// if err != nil {
+	// 	panic(err)
+	// }
 }

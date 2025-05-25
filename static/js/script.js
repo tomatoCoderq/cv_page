@@ -1,3 +1,5 @@
+
+
 new fullpage('#fullpage', {
     autoScrolling: true,
     navigation: true,
@@ -63,11 +65,16 @@ const translations = {
 };
 
 function setLanguage(lang) {
+    const langMap = translations[lang];
     document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        el.textContent = translations[lang][key] || key;
+      const key = el.getAttribute("data-i18n");
+      if (langMap[key]) {
+        el.textContent = langMap[key];
+      }
     });
-}
+  }
 
 // Set default language
-setLanguage('en');
+document.addEventListener("DOMContentLoaded", () => {
+    setLanguage("en");
+  });
