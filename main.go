@@ -9,8 +9,8 @@ import (
 func main() {
 
 	tmpl := template.Must(template.ParseFiles(
-		"templates/base.html",
 		"templates/index.html",
+		"templates/content.html",
 		"templates/header.html",
 		"templates/stack.html",
 		"templates/projects.html",
@@ -19,7 +19,7 @@ func main() {
 	))
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		err := tmpl.ExecuteTemplate(w, "base.html", nil)
+		err := tmpl.ExecuteTemplate(w, "index.html", nil)
 		if err != nil {
 			http.Error(w, "Template error: "+err.Error(), http.StatusInternalServerError)
 		}
