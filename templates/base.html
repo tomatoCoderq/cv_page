@@ -9,30 +9,64 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fontsource/iosevka/index.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css" /> -->
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
 
 <body>
-    <div class="position-absolute top-0 end-0 p-3 z-3 d-flex align-items-center gap-2">
+    <!-- <div class="position-absolute top-0 end-0 p-3 z-3 d-flex align-items-center gap-2">
         <!-- Language Switch -->
-        <div class="btn-group" role="group">
+        <!-- <div class="btn-group" role="group">
             <button class="btn btn-sm btn-outline-dark" onclick="setLanguage('en')">EN</button>
             <button class="btn btn-sm btn-outline-dark" onclick="setLanguage('ru')">RU</button>
-        </div>
+        </div> -->
 
         <!-- Download CV Button -->
-        <a href="/assets/files/cv.pdf" download class="btn btn-sm btn-dark">
+        <!-- <a href="/assets/files/cv.pdf" download class="btn btn-sm btn-dark">
             <i class="bi bi-download me-1"></i> CV
-        </a>
-    </div>
+        </a> -->
+    <!-- </div> -->
 
-    <div id="fullpage">
-        {{ block "content" . }}{{ end }}
-    </div>
+    <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-2 px-4">
+        <div class="container-fluid align-items-center">
+          <a class="navbar-brand fw-bold p-3 border border-black bg-white rounded" href="#section0">tomatocoder</a>
+      
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="#techstack" class="nav-link" data-i18n="techstack">TechStack</a>
+              </li>
+              <li class="nav-item">
+                <a href="#projectsc" class="nav-link" data-i18n="projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a href="#achievements" class="nav-link" data-i18n="achievements">Achievements</a>
+              </li>
+              <li class="nav-item">
+                <a href="#add" class="nav-link" data-i18n="section4">More</a>
+              </li>
+            </ul>
+      
+            <div class="d-flex gap-2">
+              <div class="btn-group">
+                <button class="btn btn-sm btn-outline-dark" onclick="setLanguage('en')">EN</button>
+                <button class="btn btn-sm btn-outline-dark" onclick="setLanguage('ru')">RU</button>
+              </div>
+              <a href="/assets/files/cv.pdf" download class="btn btn-sm btn-dark">
+                <i class="bi bi-download me-1"></i> CV
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+    {{ block "content" . }}{{ end }}
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script> -->
     <script src="/static/js/script.js"></script>
 </body>
 

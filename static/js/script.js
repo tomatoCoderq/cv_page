@@ -1,14 +1,3 @@
-
-
-new fullpage('#fullpage', {
-    autoScrolling: true,
-    navigation: true,
-    anchors: ['general-info', 'techstack', 'projects', 'achievments', 'add'],
-    menu: '.header-container',
-    scrollOverflow: true
-});
-
-
 const translations = {
     en: {
         aboutmetitle: "About me",
@@ -67,14 +56,14 @@ const translations = {
 function setLanguage(lang) {
     const langMap = translations[lang];
     document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      if (langMap[key]) {
-        el.textContent = langMap[key];
-      }
+        const key = el.getAttribute("data-i18n");
+        if (langMap[key]) {
+            el.textContent = langMap[key];
+        }
     });
-  }
+}
 
 // Set default language
 document.addEventListener("DOMContentLoaded", () => {
     setLanguage("en");
-  });
+});
