@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CV</title>
+  <title>tomatocoder</title>
+  <link rel="icon" href="./assets/images/favicon.png" type="image/png">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@fontsource/iosevka/index.min.css" rel="stylesheet">
@@ -15,18 +17,7 @@
 
 
 <body>
-  <!-- <div class="position-absolute top-0 end-0 p-3 z-3 d-flex align-items-center gap-2">
-        <!-- Language Switch -->
-  <!-- <div class="btn-group" role="group">
-            <button class="btn btn-sm btn-outline-dark" onclick="setLanguage('en')">EN</button>
-            <button class="btn btn-sm btn-outline-dark" onclick="setLanguage('ru')">RU</button>
-        </div> -->
 
-  <!-- Download CV Button -->
-  <!-- <a href="/assets/files/cv.pdf" download class="btn btn-sm btn-dark">
-            <i class="bi bi-download me-1"></i> CV
-        </a> -->
-  <!-- </div> -->
 
   <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-2 px-4">
     <div class="container-fluid align-items-center">
@@ -109,7 +100,7 @@
             <small class="mb-0" data-i18n="aiogram_info">Created bots for hackathons and singletone
               orders</small>
           </div>
-          <img src="./icons/aiogram.svg" alt="Aiogram" width="50" height="50">
+          <img src="./assets/icons/aiogram.svg" alt="Aiogram" width="50" height="50">
         </div>
 
         <!-- Tool 2 -->
@@ -221,45 +212,53 @@
   </div>
 
   <div class="section" id="achievements">
-    <div class="section-title" data-i18n="achievements">Achievements</div>
+    <div class="container">
+      <h2 class="section-title mb-4" data-i18n="achievements">Achievements</h2>
 
-    <div class="container mt-5">
       <ul class="list-group list-group-flush">
 
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          <div>
-            <strong>Jan 2024:</strong> Hackathon "AI-Weekend"
+          <div data-i18n="ai_arrow">
+            <strong>Aug 2024:</strong> Hackathon "AI-Arrow"
           </div>
-          <span class="badge bg-success ms-4">1st Place</span>
+          <span class="badge bg-success ms-4" data-i18n="participant">Participant</span>
         </li>
 
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          <div>
-            <strong>Oct 2023:</strong> CTF "KazanCTF"
+          <div data-i18n="deadline">
+            <strong>Apr 2024:</strong> Case-Championship "Deadline" by T-bank
           </div>
-          <span class="badge bg-warning text-dark">Finalist</span>
+          <span class="badge bg-primary" data-i18n="place_4">4th</span>
         </li>
 
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          <div>
+          <div data-i18n="bolshie_vyzovy">
+            <strong>Mar 2023:</strong> All-Russian regional stage competition nanotechnology project “Bolshie vyzovy”
+          </div>
+          <span class="badge bg-success ms-4" data-i18n="participant">Participant</span>
+        </li>
+
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div data-i18n="robofinal">
+            <strong>Jul 2022:</strong> National final of Russian Robotics Olympiad
+          </div>
+          <span class="badge bg-warning text-dark" data-i18n="place_3">3rd place</span>
+        </li>
+
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div data-i18n="school_comp">
             <strong>Jul 2023:</strong> School Robotics Competition
           </div>
-          <span class="badge bg-secondary ms-4">Participant</span>
-        </li>
-
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          <div>
-            <strong>May 2022:</strong> Codeforces Round #XYZ
-          </div>
-          <span class="badge bg-primary">Top 20%</span>
+          <span class="badge bg-success ms-4" data-i18n="participant">Participant</span>
         </li>
 
       </ul>
     </div>
   </div>
 
-  <div class="section" id="add">
-    <div class="section-title" data-i18n="More">More</div>
+
+  <div class="section" id="more">
+    <div class="section-title" data-i18n="moreTitle">More</div>
 
     <div class="container mt-5 text-center">
 
@@ -293,7 +292,7 @@
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script> -->
   <script src="./static/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  
+
 </body>
 
 <footer class="footer mt-auto py-3 bg-light">
