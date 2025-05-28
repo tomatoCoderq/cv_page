@@ -53,10 +53,13 @@ body {
 
 /* Title pinned to top left */
 .section-title {
+  text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
+
+
 
 /* Content block for stack name + photo */
 .stack-content {
