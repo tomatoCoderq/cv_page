@@ -3,10 +3,6 @@ body {
   font-family: 'Iosevka', monospace;
   height: 100%;
   margin: 0;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  padding-top: 70px; /* prevent content hidden under navbar */
 }
 
 .header-container {
@@ -21,10 +17,69 @@ body {
   color: #000;
 }
 
-.section#section0 {
-  display: block;
-  /* overrides fullPage.js flex centering */
-  padding: 4rem 2rem;
+/* Custom styling for fullpage sections */
+.section {
+  padding: 100px 15px 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Navbar should stay on top */
+.navbar {
+  z-index: 9999;
+}
+
+/* Footer adjustments for fullpage */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Ensure content fits within sections */
+.section .container {
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+}
+
+/* Style for sections with scrollable content */
+.section .list-group {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+/* Fullpage.js scroll overflow support */
+.fp-overflow {
+  justify-content: flex-start !important;
+}
+
+/* Ensure tech stack content is scrollable on small screens */
+.section[data-anchor="techstack"] {
+  overflow-y: auto;
+}
+
+.section[data-anchor="projectsc"] {
+  overflow-y: auto;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-height: 700px) {
+  .section .container {
+    max-height: none;
+    height: auto;
+  }
+  
+  .section[data-anchor="techstack"] .row {
+    gap: 0.5rem;
+  }
+  
+  .section[data-anchor="techstack"] .col-md-6 {
+    margin-bottom: 0.5rem;
+    min-height: 60px;
+  }
 }
 
 .header-link {
@@ -42,21 +97,26 @@ body {
   background-color: #dee2e6;
 }
 
-.section {
-  min-height: 100vh;
-  padding: 100px 15px 60px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 /* Title pinned to top left */
 .section-title {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
+}
+
+/* Center project descriptions while keeping row layout */
+.section[data-anchor="projectsc"] .list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.section[data-anchor="projectsc"] .list-group-item small {
+  text-align: center;
+  flex: 1;
+  margin: 0 1rem;
 }
 
 

@@ -12,15 +12,18 @@ const translations = {
         github_info: "Kinda obviously",
         psql_info: "DB for most of the projects",
         arduino_info: "For robotics competitions and hobby",
-        fastapi_info: "In progress...",
         projectsc: "Projects",
         projects: "Projects",
         gitnotes: "CLI Tool made with Cobra to keep notes connected to branch/version",
+        repeatro: "Simple Anki-based word learning app with microservices, gRPC and goose migrations",
         kach: "Small lightweight proxy created for notification bot",
         queue_bot: "Bot for school robotics department to control printer usage, tasks, and penalties",
         dnd_bot: "Bot for hackathon that simplifies running a D&D session for masters",
+        workshops: "Particapated in creation of university workshop check-in system as backend dev",
         portfolio_info: "This website you're looking at right now :)",
         achievements: "Achievements",
+        fastapi_info: "Instrument for own and university backend projects ",
+        flutter_info: "For fast prototyping and cross-platform development",
         moreTitle: "More",
         contact_title: "Contact",
         profiles_title: "Profiles",
@@ -44,18 +47,21 @@ const translations = {
         aiogram_info: "Создавал ботов для хакатонов и отдельных заказов",
         go_info: "Мой основной инструмент для backend-разработки",
         cpp_info: "Контесты на CF и университетские домашки",
+        fastapi_info: "Инструмент для собственных и университетских backend-проектов",
         github_info: "Ну очевидно :)",
         psql_info: "БД для большинства проектов",
         arduino_info: "Для соревнований по робототехнике и хобби",
-        fastapi_info: "В процессе освоения...",
         projectsc: "Проекты",
         projects: "Проекты",
         gitnotes: "CLI-инструмент на Cobra для заметок, привязанных к ветке/версии",
+        repeatro: "Приложение для изучения слов по типу Anki с микросервисами, gRPC и goose-миграциями",
         kach: "Лёгкий прокси для бота-уведомителя о билетах в театре",
         queue_bot: "Бот для кружка робототехники в школе: очередь, задания и штрафы",
         dnd_bot: "Бот для хакатона, упрощающий ведение D&D-сессий для мастеров",
         portfolio_info: "Этот сайт, на который ты сейчас смотришь :)",
+        workshops: "Участвовал в создании системы регистрации на университетские воркшопы как бэкенд-разработчик",
         achievements: "Достижения",
+        flutter_info: "Для быстрого прототипирования и кроссплатформенной мобильной разработки",
         moreTitle: "Еще",
         contact_title: "Контакты",
         profiles_title: "Профили",
@@ -81,7 +87,45 @@ function setLanguage(lang) {
     });
 }
 
+// Initialize Fullpage.js
+function initializeFullpage() {
+    new fullpage('#fullpage', {
+        //options here
+        autoScrolling: true,
+        scrollHorizontally: false,
+        navigation: false,
+        anchors: ['home', 'techstack', 'projectsc', 'achievements', 'more'],
+        sectionsColor: ['#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff'],
+        css3: true,
+        scrollingSpeed: 700,
+        fitToSection: true,
+        fitToSectionDelay: 1000,
+        scrollBar: false,
+        easing: 'easeInOutCubic',
+        easingcss3: 'ease',
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: true,
+        continuousVertical: false,
+        normalScrollElements: null,
+        scrollOverflow: true,
+        scrollOverflowReset: false,
+        scrollOverflowMacStyle: false,
+        touchSensitivity: 15,
+        normalScrollElementTouchThreshold: 5,
+        bigSectionsDestination: null,
+        keyboardScrolling: true,
+        animateAnchor: true,
+        recordHistory: true,
+        allowCorrectDirection: false,
+        lazyLoading: false,
+        observer: true,
+        credits: { enabled: false }
+    });
+}
+
 // Set default language
 document.addEventListener("DOMContentLoaded", () => {
     setLanguage("en");
+    initializeFullpage();
 });

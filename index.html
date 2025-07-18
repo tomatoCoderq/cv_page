@@ -11,7 +11,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@fontsource/iosevka/index.min.css" rel="stylesheet">
 
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/vendors/scrolloverflow.min.js"></script>
   <link rel="stylesheet" href="./static/css/style.css">
 </head>
 
@@ -21,7 +22,7 @@
 
   <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top py-2 px-4">
     <div class="container-fluid align-items-center">
-      <a class="navbar-brand fw-bold p-3 border border-black bg-white rounded" href="#section0">tomatocoder</a>
+      <a class="navbar-brand fw-bold p-3 border border-black bg-white rounded" href="#home">tomatocoder</a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -57,165 +58,188 @@
   </header>
 
 
-  <div class="section" id="section0">
-    <div class="container pt-5">
-      <div class="row align-items-center">
-        <!-- Text: Left side -->
-        <div class="col-md-6">
-          <h2 data-i18n="aboutmetitle">About Me</h2>
-          <p data-i18n="aboutme">
-            Innopolis University student. Below you can see my stack, projects, and achievements.
-          </p>
-        </div>
+  <div id="fullpage">
+    <div class="section" data-anchor="home">
+      <div class="container pt-5">
+        <div class="row align-items-center">
+          <!-- Text: Left side -->
+          <div class="col-md-6">
+            <h2 data-i18n="aboutmetitle">About Me</h2>
+            <p data-i18n="aboutme">
+              Innopolis University student. Below you can see my stack, projects, and achievements.
+            </p>
+          </div>
 
-        <!-- Image: Right side -->
-        <div class="col-md-6 text-md-end text-center">
-          <img src="./assets/images/img.jpg" width="150" height="195" alt="Me" class="img-fluid rounded mb-2" />
-          <h4 class="mt-2" data-i18n="name">Khasan Sadykov</h4>
-          <p class="text-muted" data-i18n="age">Age: 18</p>
+          <!-- Image: Right side -->
+          <div class="col-md-6 text-md-end text-center">
+            <img src="./assets/images/img.jpg" width="150" height="195" alt="Me" class="img-fluid rounded mb-2" />
+            <h4 class="mt-2" data-i18n="name">Khasan Sadykov</h4>
+            <p class="text-muted" data-i18n="age">Age: 18</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
 
-  <div class="section" id="techstack">
-    <div class="section-title" data-i18n="techstack">Tech Stack</div>
+    <div class="section" data-anchor="techstack">
+      <div class="section-title" data-i18n="techstack">Tech Stack</div>
 
-    <div class="container mt-5">
-      <div class="row justify-content-center g-4">
+      <div class="container mt-5">
+        <div class="row justify-content-center g-4">
 
-        <!-- Tool 1 -->
-        <div class="col-md-6 d-flex align-items-center">
-          <div class="flex-grow-1">
-            <h5 class="mb-0">Python</h5>
-            <small class="mb-0" data-i18n="pythoninfo">Actively used for robotics, CV, and bots</small>
+          <!-- Tool 1 -->
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="flex-grow-1">
+              <h5 class="mb-0">Python</h5>
+              <small class="mb-0" data-i18n="pythoninfo">Actively used for robotics, CV, and bots</small>
+            </div>
+            <img src="./assets/icons/python.svg" alt="Python" width="50" height="50">
           </div>
-          <img src="./assets/icons/python.svg" alt="Python" width="50" height="50">
-        </div>
 
-        <div class="col-md-6 d-flex align-items-center">
-          <div class="flex-grow-1">
-            <h5 class="mb-0">Aiogram</h5>
-            <small class="mb-0" data-i18n="aiogram_info">Created bots for hackathons and singletone
-              orders</small>
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="flex-grow-1">
+              <h5 class="mb-0">Aiogram</h5>
+              <small class="mb-0" data-i18n="aiogram_info">Created bots for hackathons and singletone
+                orders</small>
+            </div>
+            <img src="./assets/icons/aiogram.svg" alt="Aiogram" width="50" height="50">
           </div>
-          <img src="./assets/icons/aiogram.svg" alt="Aiogram" width="50" height="50">
-        </div>
 
-        <!-- Tool 2 -->
-        <div class="col-md-6 d-flex align-items-center">
-          <div class="flex-grow-1">
-            <h5 class="mb-0">Go</h5>
-            <small class="mb-0" data-i18n="go_info">My current main backend tool</small>
+          <!-- Tool 2 -->
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="flex-grow-1">
+              <h5 class="mb-0">Go</h5>
+              <small class="mb-0" data-i18n="go_info">My current main backend tool</small>
+            </div>
+            <img src="./assets/icons/go.svg" alt="Go" width="50" height="50">
           </div>
-          <img src="./assets/icons/go.svg" alt="Go" width="50" height="50">
-        </div>
 
-        <!-- Tool 3 -->
-        <div class="col-md-6 d-flex align-items-center">
-          <div class="flex-grow-1">
-            <h5 class="mb-0">С++</h5>
-            <small class="mb-0" data-i18n="cpp_info">CF contests and university assignments</small>
+          <!-- Tool 3 -->
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="flex-grow-1">
+              <h5 class="mb-0">С++</h5>
+              <small class="mb-0" data-i18n="cpp_info">CF contests and university assignments</small>
+            </div>
+            <img src="./assets/icons/cpp.svg" alt="PostgreSQL" width="50" height="50">
           </div>
-          <img src="./assets/icons/cpp.svg" alt="PostgreSQL" width="50" height="50">
-        </div>
 
-        <!-- Tool 4 -->
-        <div class="col-md-6 d-flex align-items-center">
-          <div class="flex-grow-1">
-            <h5 class="mb-0">Git/Github</h5>
-            <small class="mb-0" data-i18n="github_info">Kinda obviously</small>
+          <!-- Tool 4 -->
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="flex-grow-1">
+              <h5 class="mb-0">Git/Github</h5>
+              <small class="mb-0" data-i18n="github_info">Kinda obviously</small>
+            </div>
+            <img src="./assets/icons/github.svg" alt="Github" width="50" height="50">
           </div>
-          <img src="./assets/icons/github.svg" alt="Github" width="50" height="50">
-        </div>
 
-        <div class="col-md-6 d-flex align-items-center">
-          <div class="flex-grow-1">
-            <h5 class="mb-0">PostgreSQL/SQLite</h5>
-            <small class="mb-0" data-i18n="psql_info">DB for most of the projects</small>
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="flex-grow-1">
+              <h5 class="mb-0">PostgreSQL/SQLite</h5>
+              <small class="mb-0" data-i18n="psql_info">DB for most of the projects</small>
+            </div>
+            <img src="./assets/icons/psql.svg" alt="PostgreSQL" width="50" height="50">
           </div>
-          <img src="./assets/icons/psql.svg" alt="PostgreSQL" width="50" height="50">
-        </div>
 
-        <div class="col-md-6 d-flex align-items-center">
-          <div class="flex-grow-1">
-            <h5 class="mb-0">Arduino C</h5>
-            <small class="mb-0" data-i18n="arduino_info">For robotics competitions and hobby</small>
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="flex-grow-1">
+              <h5 class="mb-0">Arduino C</h5>
+              <small class="mb-0" data-i18n="arduino_info">For robotics competitions and hobby</small>
+            </div>
+            <img src="./assets/icons/arduino.svg" alt="Arduino" width="50" height="50">
           </div>
-          <img src="./assets/icons/arduino.svg" alt="Arduino" width="50" height="50">
-        </div>
 
-        <div class="col-md-6 d-flex align-items-center">
-          <div class="flex-grow-1">
-            <h5 class="mb-0">FastAPI</h5>
-            <small class="mb-0" data-i18n="fastapi_info">In progress...</small>
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="flex-grow-1">
+              <h5 class="mb-0">FastAPI</h5>
+              <small class="mb-0" data-i18n="fastapi_info">Own and university backend projects</small>
+            </div>
+            <img src="./assets/icons/fastapi.svg" alt="FastAPI" width="50" height="50">
           </div>
-          <img src="./assets/icons/fastapi.svg" alt="FastAPI" width="50" height="50">
-        </div>
 
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="flex-grow-1">
+              <h5 class="mb-0">Flutter</h5>
+              <small class="mb-0" data-i18n="flutter_info">For fast prototyping and cross-platform mobile development</small>
+            </div>
+            <i class="bi bi-phone" style="font-size: 50px; color: #02569B;"></i>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
 
 
-  <div class="projectsc" id="projectsc">
-    <div class="section-title" data-i18n="projectsc">Projects</div>
+    <div class="section" data-anchor="projectsc">
+      <div class="section-title" data-i18n="projectsc">Projects</div>
 
-    <div class="container mt-5">
-      <ul class="list-group list-group-flush">
+      <div class="container mt-5">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="https://github.com/GOeda-Co/backend" target="_blank" class="text-decoration-none">
+              Repeatro
+            </a>
+            <small data-i18n="repeatro">Simple Anki-based word learning app with microservices, gRPC and goose migrations</small>
+            <span class="badge bg-secondary ">Go / Gin / gRPC </span>
+          </li>
 
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          <a href="https://github.com/tomatoCoderq/gitnotes" target="_blank" class="text-decoration-none">
-            GitNotes |
-          </a>
-          <small data-i18n="gitnotes">CLI Tool made with Cobra to keep notes connected to
-            branch/version</small>
-          <span class="badge bg-secondary ">Go / Cobra</span>
-        </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="https://github.com/tomatoCoderq/gitnotes" target="_blank" class="text-decoration-none">
+              GitNotes
+            </a>
+            <small data-i18n="gitnotes">CLI Tool made with Cobra to keep notes connected to
+              branch/version</small>
+            <span class="badge bg-secondary ">Go / Cobra</span>
+          </li>
 
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          <a href="https://github.com/tomatoCoderq/KachProxyAPIproject1" target="_blank" class="text-decoration-none">
-            KachalovProxyAPI |
-          </a>
-          <small data-i18n="kach">Small leigthweight proxy created for notification bot</small>
-          <span class="badge bg-secondary">Go / Gin / Colly</span>
-        </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="https://github.com/tomatoCoderq/KachProxyAPIproject1" target="_blank" class="text-decoration-none">
+              KachalovProxyAPI
+            </a>
+            <small data-i18n="kach">Small leigthweight proxy created for notification bot</small>
+            <span class="badge bg-secondary">Go / Gin / Colly</span>
+          </li>
 
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          <a href="https://github.com/tomatoCoderq/queue_bot" target="_blank" class="text-decoration-none">
-            Queue Bot |
-          </a>
-          <small data-i18n="queue_bot"> Bot for school robotics department to controll usage of printers,
-            tasks, and penalties</small>
-          <span class="badge bg-secondary ms-4">Python / Aiogram / SQLite</span>
-        </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="https://github.com/tomatoCoderq/queue_bot" target="_blank" class="text-decoration-none">
+              Queue Bot
+            </a>
+            <small data-i18n="queue_bot"> Bot for school robotics department to controll usage of printers,
+              tasks, and penalties</small>
+            <span class="badge bg-secondary ms-4">Python / Aiogram / SQLite</span>
+          </li>
 
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          <a href="https://github.com/tomatoCoderq/dnd-bot" target="_blank" class="text-decoration-none">
-            Dnd Bot |
-          </a>
-          <small data-i18n="dnd_bot"> Bot for hackathon that simplify the conducting of game for
-            masters</small>
-          <span class="badge bg-secondary ms-4">Python / SQLite / Aiogram / OpenAIAPI</span>
-        </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="https://github.com/InNoHassle-Workshops-Check-In" target="_blank" class="text-decoration-none">
+              Workshop Check-In
+            </a>
+            <small data-i18n="workshops">Particapated in creation of university workshop check-in system as backend dev</small>
+            <span class="badge bg-secondary ms-4">Python / FastAPI / PostgreSQL / Alembic</span>
+          </li>
 
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          <a href="https://github.com/yourname/project4" target="_blank" class="text-decoration-none">
-            Personal Portfolio Website |
-          </a>
-          <small data-i18n="portfolio_info"> This website you're looking at right now :)</small>
-          <span class="badge bg-secondary">HTML / CSS / JS</span>
-        </li>
-      </ul>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="https://github.com/tomatoCoderq/dnd-bot" target="_blank" class="text-decoration-none">
+              Dnd Bot
+            </a>
+            <small data-i18n="dnd_bot"> Bot for hackathon that simplify the conducting of game for
+              masters</small>
+            <span class="badge bg-secondary ms-4">Python / SQLite / Aiogram / OpenAIAPI</span>
+          </li>
+
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="https://github.com/yourname/project4" target="_blank" class="text-decoration-none">
+              Personal Portfolio Website
+            </a>
+            <small data-i18n="portfolio_info"> This website you're looking at right now :)</small>
+            <span class="badge bg-secondary">HTML / CSS / JS</span>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <div class="section" id="achievements">
+    <div class="section" data-anchor="achievements">
       <h2 class="section-title mb-4" data-i18n="achievements">Achievements</h2>
 
       <ul class="list-group list-group-flush">
-
         <li class="list-group-item d-flex justify-content-between align-items-center">
           <div data-i18n="ai_arrow">
             <strong>Aug 2024:</strong> Hackathon "AI-Arrow"
@@ -251,41 +275,45 @@
           <span class="badge bg-success ms-4" data-i18n="participant">Participant</span>
         </li>
       </ul>
-  </div>
-
-  <div class="section" id="more">
-    <div class="section-title" data-i18n="moreTitle">More</div>
-
-    <div class="container mt-5 text-center">
-
-      <!-- Contact Info -->
-      <div class="mb-4">
-        <h5 data-i18n="contact_title">Contact</h5>
-        <p>Email: <a href="mailto:k.sadykov@innopolis.university">email</a></p>
-        <p>Telegram: <a href="https://t.me/tomatocoder" target="_blank">@tomatocoder</a></p>
-      </div>
-
-      <!-- Social Links -->
-      <div class="mb-4">
-        <h5 data-i18n="profiles_title">Profiles</h5>
-        <a href="https://github.com/tomatoCoderq" target="_blank" class="me-3">
-          <i class="bi bi-github"></i> GitHub
-        </a>
-        <a href="https://codeforces.com/profile/tomator" target="_blank" class="me-3">
-          <i class="bi bi-code-square"></i> CodeForces
-        </a>
-      </div>
-
-      <!-- Blog Preview -->
-      <div class="mb-4">
-        <h1 data-i18n="ending"><b>Thanks for attention!</b></h1>
-      </div>
-
-
     </div>
+
+    <div class="section" data-anchor="more">
+      <div class="section-title" data-i18n="moreTitle">More</div>
+
+      <div class="container mt-5 text-center"> <!-- Contact Info -->
+        <div class="mb-4">
+          <h5 data-i18n="contact_title">Contact</h5>
+          <p>Email: <a href="mailto:k.sadykov@innopolis.university">email</a></p>
+          <p>Telegram: <a href="https://t.me/tomatocoder" target="_blank">@tomatocoder</a></p>
+        </div>
+
+        <!-- Social Links -->
+        <div class="mb-4">
+          <h5 data-i18n="profiles_title">Profiles</h5>
+          <a href="https://github.com/tomatoCoderq" target="_blank" class="me-3">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a href="https://codeforces.com/profile/tomator" target="_blank" class="me-3">
+            <i class="bi bi-code-square"></i> CodeForces
+          </a>
+        </div>
+
+        <!-- Blog Preview -->
+        <div class="mb-4">
+          <h1 data-i18n="ending"><b>Thanks for attention!</b></h1>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script> -->
+
+  </div>
+  </div>
   </div>
 
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
   <script src="./static/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
